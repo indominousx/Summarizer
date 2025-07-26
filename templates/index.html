@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Summarizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Document Summarizer</h1>
+        <div class="upload-section">
+            <form id="uploadForm" enctype="multipart/form-data">
+                <div class="file-input-wrapper">
+                    <input type="file" id="fileInput" name="file" accept=".pdf,.docx" required>
+                    <label for="fileInput" class="file-label">
+                        <span class="file-icon">📄</span>
+                        <span class="file-text">Choose PDF or DOCX file</span>
+                    </label>
+                </div>
+                <button type="submit" id="submitBtn">Summarize Document</button>
+            </form>
+        </div>
+        
+        <div id="loadingSection" class="loading-section" style="display: none;">
+            <div class="spinner"></div>
+            <p>Processing your document...</p>
+        </div>
+        
+        <div id="summarySection" class="summary-section" style="display: none;">
+            <h2>Summary</h2>
+            <div id="summaryContent" class="summary-content"></div>
+        </div>
+        
+        <div id="errorSection" class="error-section" style="display: none;">
+            <h2>Error</h2>
+            <div id="errorContent" class="error-content"></div>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

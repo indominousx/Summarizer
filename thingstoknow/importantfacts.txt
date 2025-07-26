@@ -1,0 +1,8 @@
+The Cohere API is based on Large Language Models (LLMs), similar to OpenAI's models, but developed and trained by Cohere,
+   a company focused on providing NLP tools for enterprises and developers.
+
+Here’s a breakdown of what the Cohere API is based on:
+1.Cohere's models are primarily based on Transformer architectures, 
+   the same foundational architecture used in models like GPT (from OpenAI) and BERT (from Google).
+2.Their most well-known model family is called Command R, 
+   optimized for retrieval-augmented generation (RAG) and reasoning tasks.
